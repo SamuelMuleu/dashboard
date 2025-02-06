@@ -5,9 +5,9 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.black};
   color: ${({ theme }) => theme.colors.white};
   flex-direction: column;
-
+  overflow-x: hidden;
   @media (min-width: 768px) {
-  
+    overflow-x: hidden;
     flex-direction: row;
   }
 `;

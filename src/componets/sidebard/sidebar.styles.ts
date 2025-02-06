@@ -8,6 +8,7 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
+    
   }
 `;
 
@@ -229,3 +230,4 @@ export const LogoutMenu = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.small};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
+

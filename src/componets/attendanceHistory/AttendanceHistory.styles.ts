@@ -20,6 +20,7 @@ export const AttendanceHistoryContainer = styled.div`
     gap: 1rem;
     max-width: 66.5rem;
     width: 90%; 
+    overflow-x: hidden;
   }
 
   @media (max-width: 500px) {
