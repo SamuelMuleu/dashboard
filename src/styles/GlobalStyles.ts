@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
 :root {
   line-height: 1.5;
   font-weight: 400;
-
+  overflow-x: hidden ;
   color: rgba(255, 255, 255, 0.87);
   background-color: #090909;
   font-synthesis: none;
@@ -25,12 +25,13 @@ body {
   padding:0;
   font-family: "Ubuntu", system-ui, Avenir, Helvetica, Arial, serif;
   box-sizing: border-box;
-overflow-x: hidden;
+overflow-x: hidden ;
   min-width: 320px;
   min-height: 100vh;
 }
 body::before {
   content: "";
+  
   position: absolute;
   top: 50%;
   left: 50%;
