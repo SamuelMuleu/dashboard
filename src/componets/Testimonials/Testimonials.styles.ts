@@ -9,15 +9,16 @@ export const TestimonialAuthor = styled.h3`
     font-size: 0.9rem;
   }
 `;
+
 export const TestimonialCard = styled.div`
-  border-radius: 15px;
-  gap: 10px;
-  padding: 20px;
+
+  gap: ${({ theme }) => theme.spacing.small};
+  padding: ${({ theme }) => theme.spacing.medium};
+
 
   p {
-    margin-bottom: 2rem;
+    margin-bottom: ${({ theme }) => theme.spacing.large};
   }
-
 
   @media (max-width: 768px) {
     width: 100%;

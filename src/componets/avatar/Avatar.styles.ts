@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const AvatarContainer = styled.div`
-  width: 40px;  
-  height: 40px; 
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: ${({ theme }) => theme.borderRadius.small};
   overflow: hidden;
-  margin: 5px;
+  margin: ${({ theme }) => theme.spacing.small};
 
   img {
     width: 100%;
@@ -13,4 +13,3 @@ export const AvatarContainer = styled.div`
     object-fit: cover;
   }
 `;
-

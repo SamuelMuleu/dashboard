@@ -6,9 +6,9 @@ import {
   RightSide,
   RightTitle,
 } from "./Login.styles";
-import LoginForm from "../componets/LoginForm";
+import LoginForm from "../../componets/loginForm/LoginForm";
 import { Avatar } from "@mui/material";
-import Testimonials from "../componets/Testimonials";
+import Testimonials from "../../componets/Testimonials/Testimonials";
 import { motion } from "framer-motion";
 
 const LoginPage = () => {
@@ -40,8 +40,9 @@ const LoginPage = () => {
           <RightTitle>
             <p>
               What&apos;s our <br /> Jobseekers Said.
+              </p>
               <div>&ldquo;</div>
-            </p>
+          
           </RightTitle>
           <Testimonials />
         </motion.div>

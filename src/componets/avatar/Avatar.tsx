@@ -1,9 +1,7 @@
+import { AvatarProps } from "@mui/material";
 import { AvatarContainer } from "./Avatar.styles";
 
-interface AvatarProps {
-  src: string;
-  alt: string;
-}
+
 const Avatar = ({src,alt}:AvatarProps) => {
   return (
     <AvatarContainer>

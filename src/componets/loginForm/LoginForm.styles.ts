@@ -1,30 +1,27 @@
 import styled from "styled-components";
+
 export const Form = styled.form`
-  padding: 2rem;
-  border-radius: 8px;
+  padding: ${({ theme }) => theme.spacing.large};
+  border-radius: ${({ theme }) => theme.borderRadius.large};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: ${({ theme }) => theme.spacing.small};
   margin-top: 10rem;
-
-
-
 
   input {
     margin-bottom: 1rem;
-
-    padding: 0.5rem;
+    padding: ${({ theme }) => theme.spacing.small};
     font-size: 1rem;
     width: 25rem;
     height: 1.8rem;
-    border: 1px solid #ddd;
-    border-radius: 0.7rem;
+    border: 1px solid ${({ theme }) => theme.colors.border};
+    border-radius: ${({ theme }) => theme.borderRadius.medium};
     outline: none;
 
     &:focus {
-      border-color: #60c192;
-      box-shadow: 0 0 0 2px rgba(96, 193, 146, 0.3);
+      border-color: ${({ theme }) => theme.colors.focusBorder};
+      box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.focusShadow};
     }
 
     &::placeholder {
@@ -40,58 +37,55 @@ export const Form = styled.form`
   a {
     display: flex;
     justify-content: end;
-    color: #545a56;
+    color: ${({ theme }) => theme.colors.link};
     margin-bottom: 1rem;
     opacity: 0.8;
     text-decoration: underline;
     transition: all 0.3s ease;
 
     &:hover {
-      color: rgb(145, 138, 138);
+      color: ${({ theme }) => theme.colors.linkHover};
     }
   }
 
-
   @media (max-width: 768px) {
     width: 40%;
-    margin-right: 6rem;
+    margin-left: 2rem;
+    justify-content: center;
+
     input {
-    width: 15rem;
-  }
-  a {
-margin-left: 2rem;
-width: 10rem;
+      width: 15rem;
+    }
 
-  
-  }
-  h2{
-    width: 18rem;
-  
-  }
+    a {
+      margin-left: 1.7rem;
+      width: 10rem;
+    }
 
+    h2 {
+      width: 18rem;
+    }
   }
 `;
 
 export const ButtonSubmit = styled.button`
-  padding: 0.8rem;
-  background: #46b582;
-  color: white;
+  padding: ${({ theme }) => theme.spacing.medium};
+  background: ${({ theme }) => theme.colors.focusBorder};
+  color: ${({ theme }) => theme.colors.white};
   border: none;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
   cursor: pointer;
   font-weight: 700;
-  border-radius: 0.7rem;
   font-size: large;
 
   &:hover {
-    background: rgb(24, 62, 44);
+    background: ${({ theme }) => theme.colors.primaryHover};
   }
 
   &:disabled {
-    background: #dcdcdc; 
-    color: #a1a1a1; 
-
-    opacity: 0.6; 
+    background: ${({ theme }) => theme.colors.disabledBg};
+    color: ${({ theme }) => theme.colors.disabledText};
+    opacity: 0.6;
   }
 
   @media (max-width: 768px) {
@@ -105,14 +99,15 @@ export const Social = styled.div`
   justify-content: center;
 
   @media (max-width: 768px) {
-    margin-left: 4rem;
+    margin-left: 5rem;
     margin-top: 1rem;
   }
 `;
+
 export const SocialButton = styled.button`
-  padding: 0.8rem;
+  padding: ${({ theme }) => theme.spacing.medium};
   margin-top: 1rem;
-  background-color: #ffffff;
+  background-color: ${({ theme }) => theme.colors.white};
   border: none;
   border-radius: 50%;
   margin-left: 0.8rem;
@@ -134,7 +129,7 @@ export const SocialButton = styled.button`
 `;
 
 export const Error = styled.p`
-  color: red;
+  color: ${({ theme }) => theme.colors.error};
   font-size: 0.875rem;
   display: flex;
   justify-content: center;

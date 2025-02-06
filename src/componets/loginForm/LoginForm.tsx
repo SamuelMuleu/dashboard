@@ -10,12 +10,9 @@ import { useNavigate } from "react-router-dom";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook, FaGithub } from "react-icons/fa";
+import { LoginFormData } from "../../types/login";
 
-interface LoginFormData {
-  email: string;
-  password: string;
-  error: string;
-}
+
 
 const LoginForm = () => {
   const navigate = useNavigate();

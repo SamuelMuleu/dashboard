@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -26,11 +25,11 @@ export const Header = styled.div`
 
 export const RightSide = styled.div`
   position: relative;
-  background: #4ab483;
-  border-radius: 1rem;
+  background: ${({ theme }) => theme.colors.focusBorder};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
   border-top-right-radius: 7rem;
-  color: #fff;
-  padding: 40px;
+  color: ${({ theme }) => theme.colors.white};
+  padding: ${({ theme }) => theme.spacing.large};
   align-items: center;
   margin-left: 4rem;
   margin-top: 14rem;
@@ -53,7 +52,7 @@ export const RightSide = styled.div`
     width: 70%;
     margin-top: 2rem;
     margin-right: 3rem;
-    padding: 20px;
+    padding: ${({ theme }) => theme.spacing.medium};
   }
 `;
 
@@ -71,13 +70,13 @@ export const RightTitle = styled.div`
 `;
 
 export const Card = styled.div`
-  border-radius: 15px;
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
   width: 28rem;
   margin-left: 1.5rem;
   margin-top: 2rem;
-  padding: 20px;
-  background-color: white;
-  color: black;
+  padding: ${({ theme }) => theme.spacing.medium};
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.text};
 
   h4 {
     margin-left: 1rem;
@@ -97,17 +96,17 @@ export const Card = styled.div`
     margin-left: 1rem;
     
     h4 {
-    margin-left: 1rem;
-    font-weight: 600;
-    font-size: 23px;
-    width: 12rem;
-  }
+      margin-left: 1rem;
+      font-weight: 600;
+      font-size: 23px;
+      width: 12rem;
+    }
 
-  p {
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-    width: 12rem;
-  }
+    p {
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+      width: 12rem;
+    }
   }
 `;
 
@@ -115,17 +114,16 @@ export const AvatarGroup = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
-  max-width: 13rem; 
+  margin-top: ${({ theme }) => theme.spacing.small};
+  max-width: 13rem;
   margin-left: 14rem;
   margin-bottom: 1.2rem;
 
-
   @media (max-width: 768px) {
     justify-content: space-evenly;
-    max-width: 100%; 
-    margin-left: 0; 
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: ${({ theme }) => theme.spacing.small};
+    margin-bottom: ${({ theme }) => theme.spacing.small};
   }
 `;

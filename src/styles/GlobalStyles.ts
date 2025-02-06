@@ -25,7 +25,7 @@ body {
   padding:0;
   font-family: "Ubuntu", system-ui, Avenir, Helvetica, Arial, serif;
   box-sizing: border-box;
-
+overflow-x: hidden;
   min-width: 320px;
   min-height: 100vh;
 }
