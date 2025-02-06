@@ -1,50 +1,70 @@
-# React + TypeScript + Vite
+# Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém um painel de controle interativo desenvolvido com React, TypeScript,Material UI, axios, Styled Components e  Framer Motion. O projeto busca oferecer uma interface intuitiva para gerenciamento de informações, utilizando animações suaves e design responsivo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Funcionalidades**
 
-## Expanding the ESLint configuration
+-Barra de pesquisa dinâmica para busca de usuários.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+-Exibição de métricas e informações detalhadas sobre usuários.
 
-- Configure the top-level `parserOptions` property like this:
+-Animações suaves utilizando Framer Motion para melhorar a experiência do usuário.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+-Interface responsiva e estilizada com Styled Components.
+
+-Gerenciamento de componentes reutilizáveis para facilitar a manutenção e expansão do projeto.
+
+---
+
+## 📁 **Estrutura do Projeto**
+
+```plaintext
+/src
+  /components
+    /attendanceHistory
+    /avatar
+    /cardDashboard
+    /attendanceHistory
+    /loginForm
+    /settings
+    /Testimonials
+  /pages
+    /Dashboard
+    /Login
+  /styles
+  /assets
+  /types
+  /App.tsx
+  /index.tsx
+  /tailwind.config.js
+  /postcss.config.cjs
+  /vite.config.ts
+  /package.json
+  /tsconfig.json
+🚀 Como Executar o Projeto
+Clone o repositório:
+```
+```bash
+
+git clone: https://github.com/SamuelMuleu/dashboard
+```
+```bash
+Instale as dependências:
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Execute o projeto:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+
+## 🔧 Tecnologias Utilizadas
+- React, TypeScript, Styled Components, Material UI, axios, Framer Motion, Vite.
+
+
+## 📸 Preview do Projeto
+[![Preview do Projeto](https://i.imgur.com/PGmWDPT.png)](https://i.imgur.com/Pg1RbzL.png)
