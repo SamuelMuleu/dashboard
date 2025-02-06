@@ -18,6 +18,7 @@ export const AttendanceHistoryContainer = styled.div`
   @media (max-width: 768px) {
     padding: 1rem;
     gap: 1rem;
+    max-width: 66.5rem;
     width: 90%; 
   }
 

@@ -163,6 +163,7 @@ margin-left: 1rem;
   @media (max-width: 768px) {
     align-items: center;
     margin-left: 0;
+
     margin-top: 7rem;
   
   }
