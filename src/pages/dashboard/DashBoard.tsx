@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Avatar } from "@mui/material";
-import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
 import {
   Container,
@@ -14,20 +14,11 @@ import {
   EmployeeDetailsCard,
 } from "./DashBoard.styles";
 
-import {
-  FaAngleDown,
-  FaTachometerAlt,
-  FaChartLine,
-  FaCalendarAlt,
-  FaUsers,
-  FaBell,
-  FaSignOutAlt,
-} from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { User } from "../../types/user";
-import { RiSettings4Fill } from "react-icons/ri";
-import { MdOutlineHelpOutline } from "react-icons/md";
+
 import Settings from "../../componets/settings/Settings";
 import {
   CardsContainer,
@@ -36,7 +27,7 @@ import {
 } from "../../componets/cardDashboard/CardDashboards.styles";
 import AttendanceHistory from "../../componets/attendanceHistory/AttendanceHistory";
 import CardDashboard from "../../componets/cardDashboard/CardDashboard";
-
+import SidebarNav from "../../componets/sidebard/sidebar";
 
 const Dashboard = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -70,10 +61,6 @@ const Dashboard = () => {
     setActiveComponent(component);
   };
 
-  const isActive = (component: string) => {
-    return activeComponent === component ? "active" : "";
-  };
-
   return (
     <Container>
       <Sidebar>
@@ -85,123 +72,10 @@ const Dashboard = () => {
           Findez
         </motion.h2>
 
-        <motion.nav
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <div>MAIN MENU</div>
-          <ul>
-            <motion.li
-              className={isActive("dashboard")}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Link
-                to="#"
-                className="nav-link"
-                onClick={() => handleNavigation("dashboard")}
-              >
-                <FaTachometerAlt /> Dashboard
-              </Link>
-            </motion.li>
-
-            <motion.li
-              className={isActive("analytics")}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <Link
-                to="#"
-                className="nav-link"
-                onClick={() => handleNavigation("analytics")}
-              >
-                <FaChartLine /> Analytics <FaAngleDown />
-              </Link>
-            </motion.li>
-
-            <motion.li
-              className={isActive("schedule")}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <Link
-                to="#"
-                className="nav-link"
-                onClick={() => handleNavigation("schedule")}
-              >
-                <FaCalendarAlt /> Schedule
-              </Link>
-            </motion.li>
-
-            <motion.li
-              className={isActive("members")}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-            >
-              <Link
-                to="#"
-                className="nav-link"
-                onClick={() => handleNavigation("members")}
-              >
-                <FaUsers /> Members
-              </Link>
-            </motion.li>
-
-            <motion.li
-              className={isActive("notifications")}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <Link
-                to="#"
-                className="nav-link"
-                onClick={() => handleNavigation("notifications")}
-              >
-                <FaBell /> Notifications
-              </Link>
-            </motion.li>
-          </ul>
-
-          <ul>
-            <div>SETTINGS</div>
-
-            <motion.li
-              className={isActive("settings")}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-            >
-              <Link
-                to="#"
-                className="nav-link"
-                onClick={() => handleNavigation("settings")}
-              >
-                <RiSettings4Fill /> Settings
-              </Link>
-            </motion.li>
-
-            <motion.li
-              className={isActive("helpcenter")}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 1 }}
-            >
-              <Link
-                to="#"
-                className="nav-link"
-                onClick={() => handleNavigation("helpcenter")}
-              >
-                <MdOutlineHelpOutline /> Help Center
-              </Link>
-            </motion.li>
-          </ul>
-        </motion.nav>
+        <SidebarNav
+          activeComponent={activeComponent}
+          handleNavigation={handleNavigation}
+        />
       </Sidebar>
 
       <MainContent>
